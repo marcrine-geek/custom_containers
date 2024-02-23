@@ -40,10 +40,10 @@ on:
         description: marcrine
         required: false
 
-    secrets:
-      REGISTRY_PASSWORD:
-        description: registry password
-        required: false
+    # secrets:
+    #   REGISTRY_PASSWORD:
+    #     description: registry password
+    #     required: false
 
 jobs:
   build:
