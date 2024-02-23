@@ -37,13 +37,12 @@ on:
         description: dockerfile path from context
         type: string
       registry-user:
-        description: registry username
+        description: marcrine
         required: false
 
     secrets:
-      REGISTRY_PASSWORD:
-        description: registry password
-        required: false
+      REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
+      
 
 jobs:
   build:
@@ -63,8 +62,8 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ${{ inputs.registry || env.REGISTRY }}
-          username: ${{ inputs.registry-user || github.actor }}
-          password: ${{ secrets.REGISTRY_PASSWORD || secrets.GITHUB_TOKEN }}
+          username: ${{ inputs.registry-user }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
 
       - uses: int128/kaniko-action@v1
         with:
