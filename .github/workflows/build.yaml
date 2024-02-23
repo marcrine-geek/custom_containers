@@ -1,9 +1,11 @@
 name: Build Image
 
 on:
-  push:
+  pull_request:
     branches:
-      - build
+      - master
+
+  repository_dispatch:
 
   workflow_dispatch:
     inputs:
