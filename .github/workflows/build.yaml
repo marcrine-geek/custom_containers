@@ -41,8 +41,9 @@ on:
         required: false
 
     secrets:
-      REGISTRY_PASSWORD: ${{ secrets.REGISTRY_PASSWORD }}
-      
+      REGISTRY_PASSWORD:
+        description: registry password
+        required: false
 
 jobs:
   build:
