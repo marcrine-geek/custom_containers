@@ -14,37 +14,6 @@
   {
       "url": "https://github.com/frappe/hrms",
       "branch": "version-14"
-  },
-  {
-      "url": "https://marcrine-geek:${{ secrets.TOKEN }}@github.com/Moi-Teaching-Referral-Hospital/mtrh_dev.git",
-      "branch": "version-14"
-  },
-  {
-      "url": "https://marcrine-geek:${{ secrets.TOKEN }}@github.com/Moi-Teaching-Referral-Hospital/hris.git",
-      "branch": "version-14"
-  },
-  {
-      "url": "https://marcrine-geek:${{ secrets.TOKEN }}@github.com/Moi-Teaching-Referral-Hospital/clinical.git",
-      "branch": "version-14"
-  },
-  {
-      "url": "https://marcrine-geek:${{ secrets.TOKEN }}@github.com/Moi-Teaching-Referral-Hospital/billing.git",
-      "branch": "version-14"
-  },
-  {
-      "url": "https://marcrine-geek:${{ secrets.TOKEN }}@github.com/Moi-Teaching-Referral-Hospital/frontend.git",
-      "branch": "version-14"
-  },
-  {
-      "url": "https://marcrine-geek:${{ secrets.TOKEN }}@github.com/Moi-Teaching-Referral-Hospital/lims.git",
-      "branch": "version-14"
-  },
-  {
-      "url": "https://marcrine-geek:${{ secrets.TOKEN }}@github.com/Moi-Teaching-Referral-Hospital/fleet.git",
-      "branch": "version-14"
-  },
-  {
-      "url": "https://marcrine-geek:${{ secrets.TOKEN }}@github.com/Moi-Teaching-Referral-Hospital/business_theme_v14.git",
-      "branch": "version-14"
   }
+  
 ]
