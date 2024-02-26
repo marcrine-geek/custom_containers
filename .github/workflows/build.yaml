@@ -45,6 +45,9 @@ on:
         description: registry password
         required: false
 
+env:
+  TOKEN: ${{ secrets.TOKEN }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -54,6 +57,7 @@ jobs:
 
       - name: Source Build Env
         id: source-build-env
+        
         run: |
           cat ./ci/build.env >> $GITHUB_ENV
           echo "VERSION=$(cat ./ci/version.txt)" >> $GITHUB_ENV
