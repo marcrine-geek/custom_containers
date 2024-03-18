@@ -23,19 +23,6 @@ jobs:
       username: ${{ secrets.USERNAME }}
       password: ${{ secrets.PASSWORD }}
 
-
-  v15:
-    uses: ./.github/workflows/build.yaml
-    with:
-      repo: erpnext
-      version: "15"
-      push: ${{ github.repository == 'marcrine-geek/custom_continers' && github.event_name != 'pull_request' }}
-      python_version: 3.11.6
-      node_version: 18.18.2
-    secrets:
-      DOCKERHUB_USERNAME: ${{ secrets.USERNAME }}
-      DOCKERHUB_TOKEN: ${{ secrets.PASSWORD }}
-
   update_versions:
     name: Update example.env and pwd.yml
     runs-on: ubuntu-latest
