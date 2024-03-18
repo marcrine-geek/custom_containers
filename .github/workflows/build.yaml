@@ -2,50 +2,7 @@ name: Build Image
 
   
 on:
-  pull_request:
-    branches:
-      - master
 
-  repository_dispatch:
-
-  workflow_dispatch:
-    inputs:
-      image:
-        description: Image name
-        type: string
-      version:
-        description: Image version tag
-        type: string
-      frappe-repo:
-        description: Frappe repo
-        type: string
-      frappe-version:
-        description: Frappe branch
-        type: string
-      py-version:
-        description: Python version
-        type: string
-      nodejs-version:
-        description: NodeJS version
-        type: string
-      apps-json-base64:
-        description: base64 encoded string of apps.json
-        type: string
-      context:
-        description: kaniko context
-        type: string
-      dockerfile:
-        description: dockerfile path from context
-        type: string
-      registry-user:
-        description: user name
-        required: false
-
-    secrets:
-      REGISTRY_PASSWORD:
-        description: registry password
-        required: false
-    
   workflow_call:
     inputs:
       repo:

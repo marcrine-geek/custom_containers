@@ -1,14 +1,9 @@
 name: Stable build
 
 on:
-  workflow_call:
-    inputs:
-      chart_version:
-        required: true
-        type: string
-      app_version:
-        required: true
-        type: string
+  pull_request:
+    branches:
+      - master
    
   # Triggered from frappe/frappe and frappe/erpnext on releases
   repository_dispatch:
