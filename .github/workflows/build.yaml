@@ -25,9 +25,9 @@ on:
         type: string
         description: NodeJS Version
     secrets:
-      DOCKERHUB_USERNAME:
+      username:
         required: true
-      DOCKERHUB_TOKEN:
+      password:
         required: true
 
 env:
