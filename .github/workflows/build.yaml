@@ -1,5 +1,6 @@
 name: Build Image
 
+  
 on:
   pull_request:
     branches:
@@ -44,6 +45,33 @@ on:
       REGISTRY_PASSWORD:
         description: registry password
         required: false
+    
+  workflow_call:
+    inputs:
+      repo:
+        required: true
+        type: string
+        description: "'erpnext' or 'frappe'"
+      version:
+        required: true
+        type: string
+        description: "Major version, git tags should match 'v{version}.*'; or 'develop'"
+      push:
+        required: true
+        type: boolean
+      python_version:
+        required: true
+        type: string
+        description: Python Version
+      node_version:
+        required: true
+        type: string
+        description: NodeJS Version
+    secrets:
+      DOCKERHUB_USERNAME:
+        required: true
+      DOCKERHUB_TOKEN:
+        required: true
 
 env:
   TOKEN: ${{ secrets.TOKEN }}
